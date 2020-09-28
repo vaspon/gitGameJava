@@ -1,4 +1,6 @@
-package javarpg;
+package javarpg.model;
+
+import javarpg.model.GameCharater;
 
 public class Mob extends GameCharater {
     String name;

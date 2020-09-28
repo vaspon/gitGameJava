@@ -1,5 +1,8 @@
 package javarpg;
 
+import javarpg.model.Hero;
+import javarpg.model.Mob;
+
 import java.util.Random;
 import java.util.Scanner;
 

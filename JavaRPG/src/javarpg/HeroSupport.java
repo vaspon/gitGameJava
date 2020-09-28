@@ -1,4 +1,6 @@
 package javarpg;
 
-public class HeroSupport extends  Hero {
+import javarpg.model.Hero;
+
+public class HeroSupport extends Hero {
 }

@@ -1,4 +1,4 @@
-package javarpg;
+package javarpg.model;
 
 public class GameCharater {
 

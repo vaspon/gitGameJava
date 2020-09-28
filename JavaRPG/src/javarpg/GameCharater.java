@@ -2,6 +2,8 @@ package javarpg;
 
 public class GameCharater {
 
+    // нужно зделать абстрактный класс
+
     protected String charClass; //класс персонажа
     protected String name; //имя
     protected int hp; //здоровье

@@ -7,7 +7,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GamePlay {
-
     public static Random random = new Random();
 
 //    private  Hero[] heroPattern = new Hero[5];

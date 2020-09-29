@@ -20,6 +20,6 @@ class GameСharacters {
     }
 
     public void showInfo() {
-
     }
+
 }

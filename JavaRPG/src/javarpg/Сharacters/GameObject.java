@@ -4,7 +4,7 @@ package javarpg.Сharacters;
 import java.util.Arrays;
 
 public class GameObject {
-    /** у каждого героя (положительного) есть 10 общих данных объекта
+    /** у каждого героя (положительного) есть 12 общих данных объекта
      * - name / имя
      * - life / жизнь
      * - isAlive / жив или мертв
@@ -21,7 +21,7 @@ public class GameObject {
     String name;
     int life;
     boolean isAlive;
-    int levelHero;
+    int[] levelHero;
     int progress;
     String[] attribute;
 
@@ -35,7 +35,7 @@ public class GameObject {
     public GameObject(String name,
                       int life,
                       boolean isAlive,
-                      int levelHero,
+                      int[] levelHero,
                       int progress,
                       String[] attribute,
                       int health,
@@ -58,9 +58,7 @@ public class GameObject {
         this.shmot = shmot;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;
@@ -82,11 +80,11 @@ public class GameObject {
         isAlive = alive;
     }
 
-    public int getLevelHero() {
+    public int[] getLevelHero() {
         return levelHero;
     }
 
-    public void setLevelHero(int levelHero) {
+    public void setLevelHero(int[] levelHero) {
         this.levelHero = levelHero;
     }
 

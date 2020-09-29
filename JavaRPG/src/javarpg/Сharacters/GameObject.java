@@ -1,4 +1,5 @@
 package javarpg.Сharacters;
+import javarpg.GamePlay.*;
 
 
 import java.util.Arrays;
@@ -17,7 +18,9 @@ public class GameObject {
      * - sinews / уменя (максимум 5)
      * - skill / скилл (персональное умение)
      * - shmot / шмот физический и магический
+     * - attack / сила атаки
     */
+
     String name;
     int life;
     boolean isAlive;
@@ -31,6 +34,7 @@ public class GameObject {
     String[] sinews;
     String[] skill;
     String[] shmot;
+    int attack;
 
     public GameObject(String name,
                       int life,
@@ -56,6 +60,13 @@ public class GameObject {
         this.sinews = sinews;
         this.skill = skill;
         this.shmot = shmot;
+    }
+
+    public int makeAttack () {
+        int minAttack = (int)(attack * 0.9f);
+        int deltaAttack = (int)(attack * 0.2f);
+        int curAttack = minAttack + (GamePlay.random.nextInt(deltaAttack));
+        return curAttack;
     }
 
     public String getName() {

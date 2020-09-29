@@ -1,8 +1,6 @@
-package javarpg.model;
+package javarpg.GamePlay;
 
-public class GameCharater {
-
-    // нужно зделать абстрактный класс
+class GameСharacters {
 
     protected String charClass; //класс персонажа
     protected String name; //имя
@@ -16,7 +14,7 @@ public class GameCharater {
         return name;
     }
 
-    public GameCharater (String name, String charClass) {
+    public void Rpg (String name, String charClass) {
         this.name = name;
         this.charClass = charClass;
     }

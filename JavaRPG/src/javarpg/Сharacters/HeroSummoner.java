@@ -1,4 +1,4 @@
-package javarpg;
+package javarpg.Сharacters;
 
 public class HeroSummoner {
 }

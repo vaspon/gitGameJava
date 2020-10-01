@@ -46,7 +46,9 @@ public class GameObject {
     String[] skill;
     String[] shmot;
     int attack;
-
+//
+    int critChance; //шанс критического урона, выставить ~10-15 в зависимости от класса, ДД можно и 20
+//
     public GameObject(String name,
                       int life,
                       boolean isAlive,
@@ -168,10 +170,29 @@ public class GameObject {
         this.shmot = shmot;
     }
 
+
+// Marsel's methods
+
+// Нанесение урона
     public int makeAttack () {
         int minAttack = (int)(attack * 0.9f);
         int deltaAttack = (int)(attack * 0.2f);
         int curAttack = minAttack + (GamePlay.random.nextInt(deltaAttack));
+        if (GamePlay.random.nextInt(100) < critChance) {
+            curAttack *= 2;
+            System.out.println(name + " нанес критический урон в размере " + curAttack + "ед. урона");
+        }
+        else
+            System.out.println(name + " нанес " + curAttack + "ед. урона");
         return curAttack;
     }
+
+    public void getDamage(int inputDamage) {
+        health -= inputDamage;
+        if (health < 1) {
+            isAlive = false;
+        }
+    }
+
+
 }

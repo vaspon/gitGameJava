@@ -5,6 +5,7 @@ import javarpg.GamePlay.*;
 import java.util.Arrays;
 
 public class GameObject {
+    АНДРЮХА ЛУЧШЕ ВСЕХ
     /** у каждого героя (положительного) есть 10 общих данных объекта
      * - name / имя
      * - life / жизнь

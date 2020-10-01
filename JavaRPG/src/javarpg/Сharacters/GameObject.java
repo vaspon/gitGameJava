@@ -6,10 +6,17 @@ import java.util.Arrays;
 
 public class GameObject {
 
-
     /** у каждого героя (положительного) есть 10 общих данных объекта
      =======    =======   ======
      /** у каждого героя (положительного) есть 12 общих данных объекта
+=======
+//АНДРЮХА ЛУЧШЕ ВСЕХ
+    /** у каждого героя (положительного) есть 10 общих данных объекта
+     =======
+     /** у каждого героя (положительного) есть 12 общих данных объекта
+     }
+}
+
      * - name / имя
      * - life / жизнь
      * - isAlive / жив или мертв
@@ -65,6 +72,9 @@ public class GameObject {
         this.skill = skill;
         this.shmot = shmot;
     }
+
+    public String getName() {
+        return name; }
 
     public void setName(String name) {
         this.name = name;
@@ -157,18 +167,11 @@ public class GameObject {
     public void setShmot(String[] shmot) {
         this.shmot = shmot;
     }
-  
-      public String getName() { return name; }
-  
- public int makeAttack () {
+
+    public int makeAttack () {
         int minAttack = (int)(attack * 0.9f);
         int deltaAttack = (int)(attack * 0.2f);
         int curAttack = minAttack + (GamePlay.random.nextInt(deltaAttack));
         return curAttack;
     }
-
-    public String getName() {
-        return name;
-    }
-
 }

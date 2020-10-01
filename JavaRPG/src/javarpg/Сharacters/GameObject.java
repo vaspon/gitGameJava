@@ -5,8 +5,6 @@ import javarpg.GamePlay.*;
 import java.util.Arrays;
 
 public class GameObject {
-    АНДРЮХА ЛУЧШЕ ВСЕХ
-    /** у каждого героя (положительного) есть 10 общих данных объекта
      * - name / имя
      * - life / жизнь
      * - isAlive / жив или мертв
@@ -25,7 +23,7 @@ public class GameObject {
     String name;
     int life;
     boolean isAlive;
-    int levelHero;
+    int[] levelHero;
     int progress;
     String[] attribute;
 
@@ -40,7 +38,7 @@ public class GameObject {
     public GameObject(String name,
                       int life,
                       boolean isAlive,
-                      int levelHero,
+                      int[] levelHero,
                       int progress,
                       String[] attribute,
                       int health,
@@ -63,17 +61,6 @@ public class GameObject {
         this.shmot = shmot;
     }
 
-    public int makeAttack () {
-        int minAttack = (int)(attack * 0.9f);
-        int deltaAttack = (int)(attack * 0.2f);
-        int curAttack = minAttack + (GamePlay.random.nextInt(deltaAttack));
-        return curAttack;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -94,11 +81,11 @@ public class GameObject {
         isAlive = alive;
     }
 
-    public int getLevelHero() {
+    public int[] getLevelHero() {
         return levelHero;
     }
 
-    public void setLevelHero(int levelHero) {
+    public void setLevelHero(int[] levelHero) {
         this.levelHero = levelHero;
     }
 
@@ -165,4 +152,24 @@ public class GameObject {
     public void setShmot(String[] shmot) {
         this.shmot = shmot;
     }
+  
+      public String getName() { return name; }
+  
+ public int makeAttack () {
+        int minAttack = (int)(attack * 0.9f);
+        int deltaAttack = (int)(attack * 0.2f);
+        int curAttack = minAttack + (GamePlay.random.nextInt(deltaAttack));
+        return curAttack;
+    }
+
+    public String getName() {
+        return name;
+    }
+=======
+
+  
+      АНДРЮХА ЛУЧШЕ ВСЕХ
+    /** у каждого героя (положительного) есть 10 общих данных объекта
+=======
+    /** у каждого героя (положительного) есть 12 общих данных объекта
 }

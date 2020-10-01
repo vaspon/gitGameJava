@@ -67,6 +67,9 @@ public class GameObject {
         this.shmot = shmot;
     }
 
+    public String getName() {
+        return name; }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -158,10 +161,7 @@ public class GameObject {
     public void setShmot(String[] shmot) {
         this.shmot = shmot;
     }
-  
-      public String getName() {
-        return name; }
-  
+
     public int makeAttack () {
         int minAttack = (int)(attack * 0.9f);
         int deltaAttack = (int)(attack * 0.2f);

@@ -1,9 +1,6 @@
 package javarpg.Сharacters;
 import javarpg.GamePlay.*;
 
-
-import java.util.Arrays;
-
 public class GameObject {
 
     /** у каждого героя (положительного) есть 10 общих данных объекта
@@ -33,7 +30,7 @@ public class GameObject {
     */
 
     String name;
-    int life;
+    boolean life;
     boolean isAlive;
     int[] levelHero;
     int progress;
@@ -47,7 +44,12 @@ public class GameObject {
     String[] shmot;
     int attack;
 //
+    int curExp; //у объектов начальное значение задать 0
+    int level;
+    int healthMax;
+    int manaMax;
     int critChance; //шанс критического урона, выставить ~10-15 в зависимости от класса, ДД можно и 20
+    String[] magicSkill; //массив заклинаний
 //
     public GameObject(String name,
                       int life,
@@ -62,8 +64,6 @@ public class GameObject {
                       String[] skill,
                       String[] shmot) {
         this.name = name;
-        this.life = life;
-        this.isAlive = isAlive;
         this.levelHero = levelHero;
         this.progress = progress;
         this.attribute = attribute;
@@ -82,20 +82,12 @@ public class GameObject {
         this.name = name;
     }
 
-    public int getLife() {
+    public boolean getLife() {
         return life;
     }
 
-    public void setLife(int life) {
+    public void setLife(boolean life) {
         this.life = life;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
-    }
-
-    public void setAlive(boolean alive) {
-        isAlive = alive;
     }
 
     public int[] getLevelHero() {
@@ -174,7 +166,7 @@ public class GameObject {
 // Marsel's methods
 
 // Нанесение урона
-    public int makeAttack () {
+    public int makeAttack() {
         int minAttack = (int)(attack * 0.9f);
         int deltaAttack = (int)(attack * 0.2f);
         int curAttack = minAttack + (GamePlay.random.nextInt(deltaAttack));
@@ -187,12 +179,39 @@ public class GameObject {
         return curAttack;
     }
 
+//получение урона
     public void getDamage(int inputDamage) {
         health -= inputDamage;
         if (health < 1) {
-            isAlive = false;
+            life = false;
         }
     }
+
+//получение опыта
+    public void expFarm(int exp) {
+        curExp+=exp;
+        System.out.println(name + " получил " + curExp + " ед. опыта");
+        // if прописать когда опыт достиг уровн на переход след уровня
+
+    }
+
+//вернуть максимум здоровья
+    public int getHealthMax() {
+            return healthMax;
+        }
+
+    public int getManaMax() {
+        return manaMax;
+    }
+
+//проверка на жив/мертв
+    public boolean isAlive() {
+        return life;
+    }
+
+
+
+
 
 
 }

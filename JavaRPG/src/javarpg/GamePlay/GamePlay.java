@@ -5,6 +5,7 @@ import javarpg.Сharacters.Mob;
 
 import java.util.Random;
 import java.util.Scanner;
+import javarpg.Сharacters.*;
 
 public class GamePlay {
     public static Random random = new Random();
@@ -27,15 +28,17 @@ public class GamePlay {
 ////выбор героя,  циклы атаки, получения урона и тд
 //    }
 //
-////    public void initGame {
-////        heroPattern[0] = new hero //танк
-////        heroPattern[1] = new Hero //маг
-////        heroPattern[2] = new Hero //сапоорт
-////        heroPattern[3] = new Hero //саммонер
-////        heroPattern[4] = new Hero //ДД
-////    }
+
 //
 //    public static void main(String[] args) {
 //
 //    }
+
+    public void initializationGame {
+        heroPat[0] = new  //танк
+        heroPat[1] = new Hero //маг
+        heroPat[2] = new Hero //сапоорт
+        heroPat[3] = new Hero //саммонер
+        heroPat[4] = new Hero //ДД
+    }
 }

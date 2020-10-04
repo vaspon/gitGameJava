@@ -45,6 +45,8 @@ public GamePlay() {
 //        heroPat[2] = new Hero //сапоорт
 //        heroPat[3] = new Hero //саммонер
 //        heroPat[4] = new Hero //ДД
+        ///
+        ////
 
         mobPat[0] = new Mob ("Тролль", 100,true, 1, 0,
                 new String[]{"atr1", "atr2"},100,30,0, new String[]{"sinews1"},

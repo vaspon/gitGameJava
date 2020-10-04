@@ -32,7 +32,7 @@ public class GameObject {
     String name;
     boolean life;
     boolean isAlive;
-    int[] levelHero;
+    int levelHero;
     int progress;
     String[] attribute;
 
@@ -45,16 +45,20 @@ public class GameObject {
     int attack;
 //
     int curExp; //у объектов начальное значение задать 0
-    int level;
     int healthMax;
     int manaMax;
     int critChance; //шанс критического урона, выставить ~10-15 в зависимости от класса, ДД можно и 20
     String[] magicSkill; //массив заклинаний
 //
+
+    public GameObject() {
+
+    };
+
     public GameObject(String name,
                       int life,
                       boolean isAlive,
-                      int[] levelHero,
+                      int levelHero,
                       int progress,
                       String[] attribute,
                       int health,
@@ -90,11 +94,11 @@ public class GameObject {
         this.life = life;
     }
 
-    public int[] getLevelHero() {
+    public int getLevelHero() {
         return levelHero;
     }
 
-    public void setLevelHero(int[] levelHero) {
+    public void setLevelHero(int levelHero) {
         this.levelHero = levelHero;
     }
 

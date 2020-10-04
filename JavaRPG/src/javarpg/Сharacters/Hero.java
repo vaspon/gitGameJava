@@ -1,23 +1,26 @@
 package javarpg.Сharacters;
 
-public class HeroTank extends GameObject {
-    public HeroTank(String name,
-                    int life,
-                    boolean isAlive,
-                    int[] levelHero,
-                    int progress,
-                    String[] attribute,
-                    int health,
-                    int damage,
-                    int mana,
-                    String[] sinews,
-                    String[] skill,
-                    String[] shmot) {
+public class Hero extends GameObject {
+    public Hero() {
+    }
+
+    public Hero(String name,
+                int life,
+                boolean isAlive,
+                int levelHero,
+                int progress,
+                String[] attribute,
+                int health,
+                int damage,
+                int mana,
+                String[] sinews,
+                String[] skill,
+                String[] shmot) {
         super(
                 name = "Tank",
                 life = 2,
                 isAlive = true,
-                levelHero = new int[]{0, 0, 0},
+                levelHero = 1,
                 progress = 0,
                 attribute = new String[]{"1 отрибут", "2 отрибут", "3 отрибут"},
                 health = 200,

@@ -207,17 +207,17 @@ public class GameMech {
         return loc;
     }
 
-    // метод боя...
-    public int makeAttack() {
-        int minAttack = (int)(attack * 0.9f);
-        int deltaAttack = (int)(attack * 0.2f);
-        int curAttack = minAttack + (GamePlay.random.nextInt(deltaAttack));
-        if (GamePlay.random.nextInt(100) < critChance) {
-            curAttack *= 2;
-            System.out.println(name + " нанес критический урон в размере " + curAttack + "ед. урона");
-        }
-        else
-            System.out.println(name + " нанес " + curAttack + "ед. урона");
-        return curAttack;
-    }
+//    // метод боя...
+//    public int makeAttack() {
+//        int minAttack = (int)(attack * 0.9f);
+//        int deltaAttack = (int)(attack * 0.2f);
+//        int curAttack = minAttack + (GamePlay.random.nextInt(deltaAttack));
+//        if (GamePlay.random.nextInt(100) < critChance) {
+//            curAttack *= 2;
+//            System.out.println(name + " нанес критический урон в размере " + curAttack + "ед. урона");
+//        }
+//        else
+//            System.out.println(name + " нанес " + curAttack + "ед. урона");
+//        return curAttack;
+//    }
 }
